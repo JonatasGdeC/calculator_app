@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+<body class="--style2">
+    <section class="container">
+        <div class="header">
+            <h1>calc</h1>
+            <div class="theme">
+                <p class="theme__title">Theme</p>
+                <div>
+                    <div class="theme__styles">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                    </div>
+                    <div class="theme__button">
+                        <div class="theme__button__ball"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input class="result" type="text" placeholder="0" readonly>
+
+        <div class="calc">
+            <div class="calc__buttons">
+                <input class="calc__buttons__button" type="button" value="7" onclick="appendToResult('7')">
+                <input class="calc__buttons__button" type="button" value="8" onclick="appendToResult('8')">
+                <input class="calc__buttons__button" type="button" value="9" onclick="appendToResult('9')">
+                <input class="calc__buttons__button calc__buttons__button--del" type="button" value="DEL" onclick="deleteCharacter()">
+            </div>
+            <div class="calc__buttons">
+                <input class="calc__buttons__button" type="button" value="4" onclick="appendToResult('4')">
+                <input class="calc__buttons__button" type="button" value="5" onclick="appendToResult('5')">
+                <input class="calc__buttons__button" type="button" value="6" onclick="appendToResult('6')">
+                <input class="calc__buttons__button" type="button" value="+" onclick="appendToResult('+')">
+            </div>
+            <div class="calc__buttons">
+                <input class="calc__buttons__button" type="button" value="1" onclick="appendToResult('1')">
+                <input class="calc__buttons__button" type="button" value="2" onclick="appendToResult('2')">
+                <input class="calc__buttons__button" type="button" value="3" onclick="appendToResult('3')">
+                <input class="calc__buttons__button" type="button" value="-" onclick="appendToResult('-')">
+            </div>
+            <div class="calc__buttons">
+                <input class="calc__buttons__button" type="button" value="." onclick="appendToResult('.')">
+                <input class="calc__buttons__button" type="button" value="0" onclick="appendToResult('0')">
+                <input class="calc__buttons__button" type="button" value="/" onclick="appendToResult('/')">
+                <input class="calc__buttons__button" type="button" value="x" onclick="appendToResult('*')">
+            </div>
+            <div class="calc__buttons">
+                <input class="calc__buttons__button calc__buttons__button--del" type="button" value="RESET" onclick="clearResult()">
+                <input class="calc__buttons__button calc__buttons__button--result" type="button" value="=" onclick="calculateResult()">
+            </div>
+        </div>
+    </section>
+    <script src="./dist/js/main.js"></script>
+</body>
+</html>
